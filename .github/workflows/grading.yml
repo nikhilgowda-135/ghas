@@ -9,6 +9,10 @@ jobs:
   grade-learner:
     if: github.event_name == 'push' # Apply additional filters as needed
     runs-on: ubuntu-latest
+    permissions:
+  contents: read
+  security-events: write
+
     steps:
       - uses: actions/checkout@v2
 
