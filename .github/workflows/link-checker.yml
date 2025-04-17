@@ -5,6 +5,10 @@ on: push
 jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
+    permissions:
+  contents: read
+  security-events: write
+
     if: github.repository == 'githubtraining/exercise-reference-a-codeql-query'
     steps:
       - uses: actions/checkout@master
